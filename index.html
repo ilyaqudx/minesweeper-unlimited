@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="1l2_RiYCAmp7s6J2NHcgw_LJhvbjY_CoSzl1ZSu_Lws" />
+  <title>Minesweeper Unlimited - Play Classic Minesweeper Online Free & Unblocked</title>
+  <meta name="description" content="Play Minesweeper Unlimited online for free! The classic retro Windows puzzle game with Beginner, Intermediate, and Expert modes. Guaranteed first-click safe, fast, unblocked on Chromebooks.">
+  <meta name="keywords" content="minesweeper, minesweeper online, google minesweeper, classic minesweeper, minesweeper unblocked, play minesweeper free, retro windows games">
+  <link rel="canonical" href="https://minesweeper-unlimited.vercel.app/">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Minesweeper Unlimited - Play Classic Minesweeper Free">
+  <meta property="og:description" content="Experience the authentic retro Windows Minesweeper with instant first-click safety, custom grids, and speed timer.">
+  <meta property="og:url" content="https://minesweeper-unlimited.vercel.app/">
+  <meta property="og:image" content="https://minesweeper-unlimited.vercel.app/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Minesweeper Unlimited Online">
+  <meta name="twitter:description" content="Classic logic deduction puzzle. Clear the minefield without detonating a bomb.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://minesweeper-unlimited.vercel.app/#app",
+        "name": "Minesweeper Unlimited",
+        "url": "https://minesweeper-unlimited.vercel.app/",
+        "applicationCategory": "GameApplication",
+        "genre": "Logic Puzzle",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires HTML5 support",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Minesweeper Unlimited is a modern, unblocked browser recreation of the classic retro Windows puzzle game featuring first-click safe openings, beginner, intermediate, and expert modes."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://minesweeper-unlimited.vercel.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you play Minesweeper?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The goal is to uncover all safe cells on the grid without detonating any hidden mines. Numbers indicate how many mines are located in the 8 adjacent surrounding squares. Use these numerical clues to deduce safe tiles and flag suspected mines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the first click in Minesweeper guaranteed to be safe?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! In Minesweeper Unlimited, mines are generated strictly after your first click, guaranteeing that your opening cell and its surrounding 8 neighbors are always 100% mine-free to reveal a helpful starting cluster."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Chord clicking in Minesweeper?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Chord clicking is a speed-solving technique. Once you have flagged all mines adjacent to a revealed number, clicking that numbered cell will instantly reveal all remaining unflagged neighbors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Minesweeper Unlimited unblocked on school Chromebooks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Built entirely in client-side HTML5, CSS, and JavaScript with zero ads or tracking, Minesweeper Unlimited runs safely and smoothly on school Chromebooks and workplace networks."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://minesweeper-unlimited.vercel.app/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://minesweeper-unlimited.vercel.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Minesweeper Unlimited",
+            "item": "https://minesweeper-unlimited.vercel.app/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-icon">💣</span>
+          <div class="brand-text">
+            <span class="brand-title">MINESWEEPER</span>
+            <span class="brand-badge">UNLIMITED</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button id="btn-sound" class="icon-btn" title="Toggle Sound" aria-label="Audio Toggle">
+            <span id="sound-icon">🔊</span>
+          </button>
+          <button id="btn-help" class="icon-btn" title="How to Play" aria-label="Help">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <div class="game-container">
+        <!-- Difficulty Bar -->
+        <div class="difficulty-selector" aria-label="Difficulty Mode">
+          <button class="diff-btn active" data-diff="beginner">Beginner (9x9)</button>
+          <button class="diff-btn" data-diff="intermediate">Intermediate (16x16)</button>
+          <button class="diff-btn" data-diff="expert">Expert (30x16)</button>
+        </div>
+
+        <!-- Classic Windows Frame -->
+        <div class="minesweeper-window">
+          <!-- Window Header (LEDs + Smiley) -->
+          <div class="window-header">
+            <div id="mines-display" class="led-display" title="Mines Remaining">010</div>
+            <button id="smiley-btn" class="smiley-btn" title="Reset Game" aria-label="Smiley Button">😀</button>
+            <div id="timer-display" class="led-display" title="Elapsed Seconds">000</div>
+          </div>
+
+          <!-- The Grid -->
+          <div class="grid-container">
+            <div id="minesweeper-grid" class="minesweeper-grid" aria-label="Minesweeper Board"></div>
+          </div>
+        </div>
+
+        <!-- Mobile Quick Flag Toggle -->
+        <div class="mobile-controls">
+          <button id="btn-toggle-flag-mode" class="tool-toggle-btn" title="Toggle Dig vs Flag Mode (Mobile)">
+            <span id="flag-mode-icon">⛏️</span>
+            <span id="flag-mode-text">Dig Mode</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- SEO Educational Section -->
+      <section class="seo-section">
+        <article class="seo-card">
+          <h1>Minesweeper Unlimited: Classic Retro Deduction Puzzle</h1>
+          <p>Welcome to <strong>Minesweeper Unlimited</strong>, the definitive free online browser edition of the world's most famous logic game. Originally popularized on Windows 3.1 and Windows 95, Minesweeper has challenged analytical minds for over three decades with its brilliant blend of probability, pattern recognition, and careful deduction.</p>
+
+          <h2>🎯 How to Play Minesweeper</h2>
+          <ul>
+            <li><strong>Left Click / Tap</strong>: Reveal a hidden square. If it is safe, it reveals a number or opens an expansive cluster of blank spaces.</li>
+            <li><strong>Right Click / Flag Mode</strong>: Place a red flag on a cell you suspect contains a hidden landmine to prevent accidental detonation.</li>
+            <li><strong>Read the Clues</strong>: A number (1 through 8) indicates exactly how many mines are hiding in the eight adjacent surrounding squares (horizontally, vertically, and diagonally).</li>
+            <li><strong>Chord Clicking</strong>: Click on an already revealed numbered square whose surrounding flags equal its number to instantly uncover all remaining adjacent tiles!</li>
+            <li><strong>Win Condition</strong>: Successfully uncover all safe squares without touching a single mine!</li>
+          </ul>
+
+          <h2>🧠 Top Minesweeper Solving Patterns</h2>
+          <ul>
+            <li><strong>The 1-1 Corner Pattern</strong>: When a 1 sits in a corner, its only diagonal unrevealed neighbor must contain the mine!</li>
+            <li><strong>The 1-2-1 Straight Wall</strong>: When you see a 1-2-1 sequence along a flat wall, the mines are guaranteed to hide directly under the two 1s, leaving the space below the 2 safe.</li>
+            <li><strong>The 1-2-2-1 Pattern</strong>: Along a straight wall, the two mines will always be positioned beneath the middle 2s.</li>
+            <li><strong>Safe Edge Openings</strong>: In Minesweeper Unlimited, your very first click is guaranteed to never be a mine, granting you an immediate foothold.</li>
+          </ul>
+        </article>
+
+        <!-- FAQ Section -->
+        <article class="seo-card">
+          <h2>❓ Frequently Asked Questions (FAQ)</h2>
+          <div class="faq-list">
+            <details open>
+              <summary>How do the difficulty modes compare?</summary>
+              <p><b>Beginner</b> features a 9x9 grid with 10 mines (12.3% mine density). <b>Intermediate</b> expands to a 16x16 grid with 40 mines (15.6% density). <b>Expert</b> challenges you with a massive 30x16 battlefield containing 99 mines (20.6% density).</p>
+            </details>
+            <details>
+              <summary>How do I flag mines on a mobile smartphone or tablet?</summary>
+              <p>You can toggle the <b>Flag Mode</b> button directly below the board to switch your taps between digging tiles and planting flags, or long-press on any cell to drop a flag.</p>
+            </details>
+            <details>
+              <summary>Is Minesweeper pure logic or does it require guessing?</summary>
+              <p>Over 80% of situations can be resolved with pure deductive logic. For rare 50/50 end-game scenarios, make the move that opens the most informative area or leaves the fewest unresolved dependencies.</p>
+            </details>
+            <details>
+              <summary>Is Minesweeper Unlimited unblocked at school?</summary>
+              <p>Yes! It runs locally in client-side HTML5 canvas with zero Flash and no blocked external servers, making it 100% accessible on Chromebooks.</p>
+            </details>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="modal-victory" class="modal-overlay" hidden>
+      <div class="modal-card">
+        <div class="modal-icon">😎 🏆</div>
+        <h3 class="modal-title">Minefield Cleared!</h3>
+        <p class="modal-desc">
+          Outstanding tactical deduction! You swept every mine in <strong id="victory-time">0 seconds</strong>.
+        </p>
+        <div class="modal-actions">
+          <button id="btn-play-again-victory" class="btn primary">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-gameover" class="modal-overlay" hidden>
+      <div class="modal-card">
+        <div class="modal-icon">💥 😵</div>
+        <h3 class="modal-title">Detonation!</h3>
+        <p class="modal-desc">
+          You stepped on a hidden landmine! Reset the board and test your logic again.
+        </p>
+        <div class="modal-actions">
+          <button id="btn-try-again-loss" class="btn primary">Try Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-help" class="modal-overlay" hidden>
+      <div class="modal-card">
+        <div class="modal-icon">📖</div>
+        <h3 class="modal-title">How to Play Minesweeper</h3>
+        <p class="modal-desc">
+          Uncover all non-mine tiles.<br><br>
+          <b>Left Click / Tap:</b> Uncover square.<br>
+          <b>Right Click / Flag Mode:</b> Plant flag 🚩.<br>
+          <b>Numbers:</b> Show how many mines touch that square.<br>
+          <b>Click Number:</b> Chord-reveals neighbors when flags match!
+        </p>
+        <div class="modal-actions">
+          <button class="btn primary modal-close">Got It!</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Matrix Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="matrix-title">🎮 More Free Online Games (SEO Matrix)</div>
+        <div class="matrix-grid">
+          <a href="https://minesweeper-unlimited.vercel.app" class="matrix-link current">
+            <span>💣</span> Minesweeper Unlimited
+          </a>
+          <a href="https://bloxorz-unblocked.vercel.app" class="matrix-link" target="_blank" rel="noopener">
+            <span>🧱</span> Bloxorz Unblocked
+          </a>
+          <a href="https://hex-2048-nu.vercel.app" class="matrix-link" target="_blank" rel="noopener">
+            <span>⬢</span> 2048 Hexagonal
+          </a>
+          <a href="https://seo-game-website.vercel.app" class="matrix-link" target="_blank" rel="noopener">
+            <span>🔷</span> Hextris Unblocked
+          </a>
+          <a href="https://waffle-game-unlimited.vercel.app" class="matrix-link" target="_blank" rel="noopener">
+            <span>🧇</span> Waffle Game Unlimited
+          </a>
+          <a href="https://falling-sand-game-one.vercel.app" class="matrix-link" target="_blank" rel="noopener">
+            <span>⏳</span> Falling Sand Simulator
+          </a>
+        </div>
+        <p class="footer-copy">© 2026 Minesweeper Unlimited · Free, Lightweight & Unblocked HTML5 Browser Games</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
